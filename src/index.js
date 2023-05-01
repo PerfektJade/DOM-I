@@ -41,13 +41,21 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 // const headerLinks = document.querySelector("nav a");
 
+// ADD TEXT CONTENT:
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = siteContent.footer.copyright;
 
+// ADD CLASS NAMES:
+footerLink.classList.add('bold');
 
+// ADD IMAGES:
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent.images['logo-img'];
 
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.images['cta-img'];
 
-const accentImg = document.querySelector('#middle-img');
-accentImg.src = siteContent.images['accent-img'];
+const midImg = document.querySelector('#middle-img');
+midImg.src = siteContent.images['accent-img'];
+// ^ OR:
+// midImg.setAttribute('src', siteContent.images['accent-img']);
