@@ -45,6 +45,16 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 const footerLink = document.querySelector('footer a');
 footerLink.textContent = siteContent.footer.copyright;
 
+const contact = document.querySelector('section.contact');
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
+// ^ OR:
+// contact.children[0].textContent = siteContent.contact['contact-h4'];
+contact.children[1].textContent = siteContent.contact['address'];
+contact.children[2].textContent = siteContent.contact['phone'];
+contact.children[3].textContent = siteContent.contact['email'];
+
+
+
 // ADD CLASS NAMES:
 footerLink.classList.add('bold');
 
