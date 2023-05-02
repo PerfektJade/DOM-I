@@ -39,24 +39,38 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-// const headerLinks = document.querySelector("nav a");
-
 // ADD TEXT CONTENT:
-const footerLink = document.querySelector('footer a');
-footerLink.textContent = siteContent.footer.copyright;
+const topContent = document.querySelector('.top-content');
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+const bottomContent = document.querySelector('.bottom-content');
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
 
 const contact = document.querySelector('section.contact');
-contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
-// ^ OR:
-// contact.children[0].textContent = siteContent.contact['contact-h4'];
+contact.children[0].textContent = siteContent.contact['contact-h4'];
+// contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
 contact.children[1].textContent = siteContent.contact['address'];
+// contact.querySelector('p:nth-of-type(1)').textContent = siteContent.contact['address'];
 contact.children[2].textContent = siteContent.contact['phone'];
 contact.children[3].textContent = siteContent.contact['email'];
+
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = siteContent.footer.copyright;
 
 
 
 // ADD CLASS NAMES:
 footerLink.classList.add('bold');
+
+
 
 // ADD IMAGES:
 const logoImg = document.querySelector('#logo-img');
@@ -67,5 +81,4 @@ ctaImg.src = siteContent.images['cta-img'];
 
 const midImg = document.querySelector('#middle-img');
 midImg.src = siteContent.images['accent-img'];
-// ^ OR:
 // midImg.setAttribute('src', siteContent.images['accent-img']);
